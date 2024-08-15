@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Car Entry</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>Car Data Entry Form</h1>
+    <form action="{{ url_for('predict') }}" method="POST">
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="Year" min="1900" max="2100" required><br><br>
+
+        <label for="present_price">Present Price:</label>
+        <input type="number" id="present_price" name="Present_Price" step="0.01" required>
+        <label>in Lakhs</label><br><br>
+
+        <label for="kms_driven">Kms Driven:</label>
+        <input type="number" id="kms_driven" name="Kms_Driven" required><br><br>
+
+        <label for="fuel_type">Fuel Type:</label>
+        <select id="fuel_type" name="Fuel_Type" required>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="CNG">CNG</option>
+        </select><br><br>
+
+        <label for="seller_type">Seller Type:</label>
+        <select id="seller_type" name="Seller_Type" required>
+            <option value="Dealer">Dealer</option>
+            <option value="Individual">Individual</option>
+        </select><br><br>
+
+        <label for="transmission">Transmission:</label>
+        <select id="transmission" name="Transmission" required>
+            <option value="Manual">Manual</option>
+            <option value="Automatic">Automatic</option>
+        </select><br><br>
+
+        <label for="owner">Owner:</label>
+        <input type="number" id="owner" name="Owner" min="0" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
